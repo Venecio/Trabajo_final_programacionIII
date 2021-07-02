@@ -1,0 +1,41 @@
+
+
+.iconos{
+    display: inline ;
+    padding: 10px;
+    vertical-align:middle;
+}
+.info{
+    border-right: solid ;
+    border-right-width: 2px;
+    color:#eae9e9;
+
+}
+.menu li a.active {
+    border-bottom: 3px solid #eae9e9;
+    
+  }
+footer{
+    border-top: 1px solid #eae9e9;
+    padding: 0px 24px;
+    left:0px;
+    bottom:0px;
+    width:100%;
+    color: #eae9e9;
+    text-align: center;
+    height: 40px;
+    line-height: 50px;
+    position:fixed;
+}
+.autor{
+    background: rgb(40, 36, 36);
+    color: #eae9e9;
+    
+
+}
+.logo{
+width: 10%;
+vertical-align:middle;
+float: left;
+padding-top: 10px;
+}

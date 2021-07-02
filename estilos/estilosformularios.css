@@ -1,0 +1,85 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    background-color: rgb(22, 21, 21);
+
+}
+
+form {
+    text-align: center;
+    width: auto;
+}
+
+.div {
+    display: block;
+    border-radius: 10px;
+    background-color: rgb(40, 36, 36);
+    padding: 10px;
+    text-align: center;
+    width: auto;
+    margin-top: 50px;
+    margin-left: 470px;
+    margin-right: 470px;
+    border: 4px double #eae9e9;
+}
+
+.input {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.input:focus {
+    background: rgba(243, 239, 239, 0.87);
+    color: black;
+}
+
+label {
+    color: #eae9e9;
+    font-family: 'Open Sans','Arial';
+}
+
+.boton {
+    background-color: rgb(22, 21, 21);
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: d-block;
+    font-size: 16px;
+    margin: 25px 3px;
+    transition-duration: 0.7s;
+    cursor: pointer;
+    font-weight: bold;
+    color: #eae9e9;
+    font-family: 'Open Sans', 'Arial';
+}
+
+.boton:hover {
+    background-color: #FFCC66;
+    color: black;
+}
+
+.titulos {
+    color: #eae9e9;
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'Open Sans','Arial';
+    width:100%;
+    
+}
+
+/*partecita de la tabla*/
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+td {
+    color: #eae9e9;
+    text-align: center;
+    border-bottom: 2px solid #eae9e9;
+}

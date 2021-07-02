@@ -1,0 +1,56 @@
+* {
+  font-family:'Quicksand', sans-serif;
+}
+
+.columnas {
+  text-align: center;
+  background-color: #d63130;
+  color: #181818;
+  text-decoration: none;
+}
+.link{
+  text-align: center;
+  background-color: #d63130;
+  color: #181818;
+  display:block;
+  text-decoration: none;
+
+}
+.tituloprincipal {
+  color: #eae9e9;
+  text-align: center;
+}
+
+.tabla {
+  margin: auto;
+  text-align: center;
+  border: 1px double #e4d4d4; 
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+#bordes{ /*th,td*/
+  border: 1px groove #e4d4d4;
+  text-decoration: none; 
+}
+
+.modificar {
+  /*boton modificar y eliminar*/
+  text-decoration: none;
+  color: #FFCC66;
+  display:block;
+  font-weight: bold;
+}
+
+.eliminar {
+  color: #dd7064;
+  text-decoration: none;
+  display: block;
+  font-weight: bold;
+}
+td{
+  border-right: groove 1px #e4d4d4; 
+  border-left: groove 1px #e4d4d4;
+}
+td:hover{
+  background: grey;
+}
