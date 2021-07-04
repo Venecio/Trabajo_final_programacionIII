@@ -1,4 +1,5 @@
-@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -31,6 +32,7 @@ form {
 .input {
     padding: 10px;
     border-radius: 10px;
+    font-family:'Quicksand', sans-serif;
 }
 
 .input:focus {
@@ -40,7 +42,7 @@ form {
 
 label {
     color: #eae9e9;
-    font-family: 'Open Sans','Arial';
+    font-family:'Quicksand', sans-serif;
 }
 
 .boton {
@@ -55,7 +57,7 @@ label {
     cursor: pointer;
     font-weight: bold;
     color: #eae9e9;
-    font-family: 'Open Sans', 'Arial';
+    font-family:'Quicksand', sans-serif;
 }
 
 .boton:hover {
@@ -67,9 +69,8 @@ label {
     color: #eae9e9;
     text-align: center;
     margin-bottom: 30px;
-    font-family: 'Open Sans','Arial';
+    font-family:'Quicksand', sans-serif;
     width:100%;
-    
 }
 
 /*partecita de la tabla*/

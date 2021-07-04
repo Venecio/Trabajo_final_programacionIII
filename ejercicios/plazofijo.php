@@ -6,6 +6,13 @@
     <link rel="stylesheet" href="../estilos/styleindex.css">
     <link rel="stylesheet" href="../estilos/estilosecundario.css">
     <link rel="shortcut icon" href="../recursos/favicon.png">
+    <link rel="stylesheet" href="../estilos/estilosformularios.css">
+    <link rel="stylesheet" href="../estilos/estilosresultados.css">
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <!-------->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +25,7 @@
     <header>
         <nav class="menucompleto">
             <ul class="menu">
-            <a href="../index.html">
+                <a href="../index.html">
                     <img class="logo" src="../recursos/Venecio.png" href="index.html" alt="logo">
                 </a>
                 <li><a href="../index.html">Inicio</a></li>
@@ -44,12 +51,12 @@
     </header>
     <form method="POST">
         <label> Ingrese su capital</label>
-        <input type="number" name="capital" placeholder="$$">
+        <input class="input" type="number" name="capital" placeholder="$$">
         <label> Ingrese el interes (sin %)</label>
-        <input type="number" name="interes">
+        <input class="input" type="number" name="interes">
         <label> Ingrese el plazo</label>
-        <input type="number" name="plazo" min=7 max=90 placeholder="7/30/60 o 90 dias">
-        <input type="submit" name="enviar" value="Calcular">
+        <input class="input" type="number" name="plazo" min=7 max=90 placeholder="7/30/60 o 90 dias">
+        <input class="boton" type="submit" name="enviar" value="Calcular">
     </form>
     <footer>
         <p class="autor">Pagina realizada por Cristian Pessio - Analista de sistemas en información</p>
@@ -79,34 +86,36 @@ if (isset($_POST['enviar'])) {
             $nfvenc = $fechavencimiento + $segundosxdia;
             $fecha = date("d-m-Y", $nfvenc);
             $arreglo = array(
-                'Capital obtenido total' => "$montototal",
-                'Interes aplicado' => "$interes",
-                'Se vence' => "$fecha"
+                'capital_total' => "$montototal",
+                'interes_aplicado' => "$interes",
+                'vencimiento' => "$fecha"
             );
-            echo '<pre>';
-            return print_r($arreglo);
-            echo  '</pre>';
+            $interes=$arreglo["interes_aplicado"] * 100; //para imprimir valor completo
+            echo '<div class="plazofijo" style="font-size: 1.2rem">Capital total: ' . '<span class="valores">' . "$" . $arreglo["capital_total"] . '</span>' . '</div>'."<br>";
+            echo '<div class="plazofijo" style="font-size: 1.2rem">Interes: ' . '<span class="valores">' . $interes ."%". '</span>' . '</div>'."<br>";
+            echo '<div class="plazofijo" style="font-size: 1.2rem">Fecha vencimiento: ' . '<span class="valores">' . $arreglo["vencimiento"] . '</span>' . '</div>';
         } elseif ($nfvenc == 6) {
             $nfvenc = $fechavencimiento + 2 * $segundosxdia;
             $fecha = date("d-m-Y", $nfvenc);
             $arreglo = array(
-                'Capital obtenido total' => "$montototal",
-                'Interes aplicado' => "$interes",
-                'Se vence' => "$fecha" //fecha vencimiento
+                'capital_total' => "$montototal",
+                'interes_aplicado' => "$interes",
+                'vencimiento' => "$fecha" //fecha vencimiento
             );
-            echo '<pre>';
-            return print_r($arreglo);
-            echo  '</pre>';
-
+            $interes=$arreglo["interes_aplicado"] * 100;
+            echo '<div class="plazofijo" style="font-size: 1.2rem">Capital total: ' . '<span class="valores">' ."$". $arreglo["capital_total"] . '</span>' . '</div>'."<br>";
+            echo '<div class="plazofijo" style="font-size: 1.2rem">Interes: ' . '<span class="valores">' . $interes ."%". '</span>' . '</div>'."<br>";
+            echo '<div class="plazofijo" style="font-size: 1.2rem">Fecha vencimiento: ' . '<span class="valores">' . $arreglo["vencimiento"] . '</span>' . '</div>';
         } else {
             $arreglo = array(
-                'Capital obtenido total' => "$montototal",
-                'Interes aplicado' => "$interes",
-                'Se vence' => "$fvenc"
+                'capital_total' => "$montototal",
+                'interes_aplicado' => "$interes",
+                'vencimiento' => "$fvenc"
             );
-            echo '<pre>';
-            return print_r($arreglo);
-            echo  '</pre>';
+            $interes=$arreglo["interes_aplicado"] * 100;
+            echo '<div class="plazofijo" style="font-size: 1.2rem">Capital total: ' . '<span class="valores">' ."$". $arreglo["capital_total"] . '</span>' . '</div>'."<br>";
+            echo '<div class="plazofijo" style="font-size: 1.2rem">Interes: ' . '<span class="valores">' . $interes ."%". '</span>' . '</div>'."<br>";
+            echo '<div class="plazofijo" style="font-size: 1.2rem">Fecha vencimiento: ' . '<span class="valores">' . $arreglo["vencimiento"] . '</span>' . '</div>';
         }
     }
     echo plazofijo($capital, $interes, $plazo);

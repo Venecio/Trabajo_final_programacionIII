@@ -61,7 +61,6 @@ $unidad = $numero % 10;$numero = $numero / 10;
 $decena = $numero % 10;$numero = $numero / 10;
 $centena = $numero % 10;$numero = $numero / 10;
 $millar = $numero % 10;$numero = $numero / 10;
-
 switch ($millar) {
     case 1:
         echo '<div class="resultadosphproman">M</div>';

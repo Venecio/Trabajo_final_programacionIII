@@ -5,6 +5,11 @@ require("modificartabla.php");
 <html lang="en">
 
 <head>
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <!-------->
     <link rel="stylesheet" href="../estilos/estilotabla.css">
     <link rel="stylesheet" href="../estilos/estilosformularios.css">
     <title>Modificar un campo</title>
@@ -29,4 +34,5 @@ require("modificartabla.php");
         </form>
     </div>
 </body>
+
 </html>

@@ -5,8 +5,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../estilos/styleindex.css">
     <link rel="stylesheet" href="../estilos/estilosecundario.css">
-    <link rel="shortcut icon" href="../recursos/favicon.png">
     <link rel="stylesheet" href="../estilos/estilosformularios.css">
+    <link rel="stylesheet" href="../estilos/estilosresultados.css">
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+       <!-------->
+    <link rel="shortcut icon" href="../recursos/favicon.png">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,10 +46,10 @@
             </ul>
         </nav>
     </header>
-    <h1 class="titulos">Ingrese radio de circulo</h1>
+    <h1 class="titulos">Ingrese radio de círculo</h1>
     <form method="POST">
-        <label>Ingrese numero</label><br>
-        <input class="input"type="number" step="any" name="numero"><br>
+        <label>Ingrese número</label><br>
+        <input class="input" type="number" step="any" name="numero" min="1"><br>
         <input class="boton" type="submit" name="guardar" value="Enviar">
     </form>
     <footer>
@@ -51,18 +57,24 @@
     </footer>
 
 </body>
+
 </html>
 <?php
 $numero = $_POST['numero'] ?? "";
-function propiedadescirculo($numero)
-{
-    $diametro = 2 * $numero;
-    $circunsferencia = pi() * $diametro;
-    $superficie = (pi() * $numero) * $numero;
-    echo "Radio = $numero<br>";
-    echo "Diametro = $diametro<br>";
-    echo "Circunsferencia = " . number_format($circunsferencia, 3) . "<br>";
-    echo "Superficie = " . number_format($superficie, 3);
+if (isset($_POST['guardar']) && !empty($_POST['numero'])) {
+
+    function propiedadescirculo($numero)
+    {
+        $diametro = 2 * $numero;
+        $circunsferencia = pi() * $diametro;
+        $superficie = (pi() * $numero) * $numero;
+        echo '<div class="contenedor">';
+            echo '<div class="resultadosphpcalculos" style="font-size: 1.2rem">Radio = ' . $numero . '</div>' . "<br>";
+            echo '<div class="resultadosphpcalculos" style="font-size: 1.2rem">Diametro = ' . $diametro . '</div>' . "<br>";
+            echo '<div class="resultadosphpcalculos" style="font-size: 1.2rem">Circunsferencia = ' . number_format($circunsferencia, 3) . '</div>' . "<br>";
+            echo '<div class="resultadosphpcalculos" style="font-size: 1.2rem">Superficie = ' . number_format($superficie, 3) . '</div>';
+        echo '</div>';
+    }
+    echo propiedadescirculo($numero);
 }
-echo propiedadescirculo($numero);
 ?>

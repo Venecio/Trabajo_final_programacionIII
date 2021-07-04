@@ -59,7 +59,7 @@
 
 </html>
 <?php
-
+if (isset($_POST['enviar']) && !empty($_POST['notas'])){
 $notas = $_POST['notas'] ?? "";
 $arreglo = array();
 for ($i = 0; $i <= count($arreglo); $i++) {
@@ -69,5 +69,6 @@ for ($i = 0; $i <= count($arreglo); $i++) {
 $tamanioarray = count($arreglo);
 $dividepromedio = array_sum($arreglo) / $tamanioarray;
 $dosdecimales = number_format($dividepromedio, 2);
-echo '<div class="resultadosphppromedio">Suma de las notas ingresadas = ' . array_sum($arreglo) . '</div>'."<br>"."<br>";
+echo '<div class="resultadosphppromedio">Suma de las notas ingresadas = ' . '<span class"notacolor">'.array_sum($arreglo).'<span>' . '</div>'."<br>"."<br>";
 echo '<div class="resultadosphppromedio">El promedio es = ' . $dosdecimales . '</div>';
+}

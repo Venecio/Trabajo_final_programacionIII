@@ -1,5 +1,6 @@
 * {
     text-align: center;
+    
 }
 
 div {
@@ -7,24 +8,50 @@ div {
     text-decoration: none;
 
 }
-
+/*roman*/
 .resultadosphproman {
-    color: red;
+    color: #d63130;
 }
 
 .resultadosphpcumple {
-    font-family: 'Calibri', 'Arial';
+    font-family:'Quicksand', sans-serif;
     font-weight: bold;
-    color: red;
+    color: #d63130;
 
+}
+.dias{
+    color: #eae9e9;
 }
 /*promedio notas*/
 .resultadosphppromedio {
-    font-family: 'Calibri', 'Arial';
+    font-family:'Quicksand', sans-serif;
     font-weight: bold;
-    color: red;
+    color: #d63130;
 }
 .inputnotas{
     padding: 20px;
     border-radius: 10px;
+}
+.notacolor{
+    color: #eaeaea;
+}
+/*Calculos*/
+.resultadophpcalculos{
+    height: 100px;
+
+    
+}
+.contenedor{
+    border-top:3px double #d63130;
+    border-bottom:3px double #d63130;
+    font-family:'Quicksand', sans-serif;
+}
+/*Plazo fijo*/
+.plazofijo{
+    color: #d63130;
+    font-family:'Quicksand', sans-serif;
+}
+.valores{
+    color: #eae9e9;
+    font-family:'Quicksand', sans-serif;
 }

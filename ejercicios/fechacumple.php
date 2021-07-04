@@ -70,12 +70,12 @@ function diferenciafechas($hoy, $fechaingresada)
         $segundosxdia = 60 * 60 * 24;
         $diferencia = strtotime($hoy) - strtotime($fechaingresada);
         $dias = intval($diferencia / $segundosxdia);
-        echo '<div class="resultadosphpcumple">Ya pasó tu cumpleaños, fue hace ' . $dias . ' dia/s :(</div>';
+            echo '<div class="resultadosphpcumple" style="font-size: 1.2rem">Ya pasó tu cumpleaños, fue hace ' . '<span class="dias">'.$dias.'</span>' . ' dia/s :(</div>';
     } else {
         $segundosxdia = 60 * 60 * 24;
         $diferencia = strtotime($fechaingresada) - strtotime($hoy);
         $dias = intval($diferencia / $segundosxdia);
-        echo "¡¡Faltan " . $dias . " dia/s para tu cumpleaños!! <br>";
+        echo '<div class="resultadosphpcumple" style="font-size: 1.2rem">¡¡Faltan ' . '<span class="dias">'.$dias.'</span>' . ' dia/s para tu cumpleaños!!</div>';
     }
 }
 if (isset($_POST['enviar']) && !empty($_POST['fecha'])){
