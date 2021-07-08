@@ -12,7 +12,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pasar a numero romano</title>
+    <title>Cuanto falta para mi cumple?</title>
 </head>
 
 <body>
@@ -36,7 +36,7 @@
                     </ul>
                 </li>
 
-                <li><a class="info" href="#"><i class="fa fa-fw fa-envelope "></i>Contacto</a></li>
+                <li><a class="info" href="../visual/contactoform.php"><i class="fa fa-fw fa-envelope "></i>Contacto</a></li>
                 <a class="iconos" target="_blank" href="https://github.com/Venecio">
                     <img src="../recursos/GitHub_Logo_White.png" width="50" height="25" />
                     <a class="iconos" target="_blank" href="https://www.unvime.edu.ar/">
@@ -49,7 +49,7 @@
         <p class="autor">Pagina realizada por Cristian Pessio - Analista de sistemas en información</p>
 
     </footer>
-    <h1 class="titulos">Ingrese fecha de su cumpleaños</h1>
+    <h1 class="titulos">Ingrese <span class="span">fecha</span> de su cumpleaños</h1>
     <form method="POST">
         <input class="input"type="date" name="fecha" placeholder="yyyy/mm/dd"><br>
         <input class="boton"type="submit" name="enviar" value="Enviar">

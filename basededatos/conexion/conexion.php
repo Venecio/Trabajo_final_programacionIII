@@ -1,4 +1,5 @@
 <?php
+
 $conexion = mysqli_connect($host, $user, $password, $bd_name);
 
 if (!$conexion) {

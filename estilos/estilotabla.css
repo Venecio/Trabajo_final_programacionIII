@@ -1,5 +1,5 @@
 * {
-  font-family:'Quicksand', sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .columnas {
@@ -8,14 +8,16 @@
   color: #181818;
   text-decoration: none;
 }
-.link{
+
+.link {
   text-align: center;
   background-color: #d63130;
   color: #181818;
-  display:block;
+  display: block;
   text-decoration: none;
 
 }
+
 .tituloprincipal {
   color: #eae9e9;
   text-align: center;
@@ -24,20 +26,22 @@
 .tabla {
   margin: auto;
   text-align: center;
-  border: 1px double #e4d4d4; 
+  border: 1px double #e4d4d4;
   border-collapse: collapse;
   margin-bottom: 20px;
 }
-#bordes{ /*th,td*/
+
+#bordes {
+  /*th,td*/
   border: 1px groove #e4d4d4;
-  text-decoration: none; 
+  text-decoration: none;
 }
 
 .modificar {
   /*boton modificar y eliminar*/
   text-decoration: none;
   color: #FFCC66;
-  display:block;
+  display: block;
   font-weight: bold;
 }
 
@@ -47,10 +51,47 @@
   display: block;
   font-weight: bold;
 }
-td{
-  border-right: groove 1px #e4d4d4; 
+
+td {
+  border-right: groove 1px #e4d4d4;
   border-left: groove 1px #e4d4d4;
 }
-td:hover{
-  background: grey;
+
+td:hover {
+  background: rgb(126, 123, 123);
+}
+
+/*Submenu exportar*/
+.thsub {
+  list-style: none;
+  text-decoration: none;
+  position: relative;
+  background-color: #d63130;
+}
+
+.submenu2 {
+  display: none;
+  position: absolute;
+  background-color: rgb(22, 21, 21);
+  width: 100%;
+  text-decoration: none;
+  list-style: none;
+}
+
+.submenu2 li a {
+  display: block;
+  padding: 15px;
+  font-family: 'Quicksand', sans-serif;
+  color: #eae9e9;
+  text-decoration: none;
+  list-style: none;
+
+}
+
+.thsub li:hover .submenu2 {
+  display: block;
+  overflow: visible;
+}
+.submenu2 li a:hover{
+  background:rgb(126, 123, 123);
 }

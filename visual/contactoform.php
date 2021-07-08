@@ -1,3 +1,9 @@
+<?php
+if (isset($_GET['alerta'])) {
+    $mensaje=$_GET['alerta'];
+    echo "<script type='text/javascript'>alert('$mensaje');</script>";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,8 +44,7 @@
                     </ul>
                 </li>
 
-                <li><a class="active" href="../visual/contactoform.html"><i
-                            class="fa fa-fw fa-envelope "></i>Contacto</a>
+                <li><a class="active" href="../visual/contactoform.html"><i class="fa fa-fw fa-envelope "></i>Contacto</a>
                 </li>
                 <a class="iconos" target="_blank" href="https://github.com/Venecio">
                     <img src="../recursos/GitHub_Logo_White.png" width="50" height="25" />
@@ -49,40 +54,45 @@
             </ul>
         </nav>
     </header>
-    <h3 class="titulo">Enviame un <span class="titulomail">mail</span></h3>
+    <h3 class="titulo">Enviar un <span class="titulomail">correo</span></h3>
     <div class="contenido">
         <div class="formulario">
-            <form action="../ejercicios/enviaremail.php" method="POST">
+            <form action="../ejercicios/enviaremail.php" enctype="multipart/form-data" method="POST">
                 <p>
                     <label>Nombre</label>
-                    <input class="inputs" type="text" name="nombre">
+                    <input class="inputs" type="text" name="nombre" required>
                 </p>
                 <p>
-                    <label>Apellido</label>
-                    <input class="inputs" type="text" name="apellido">
+                    <label>Su correo</label>
+                    <input class="inputs" type="email" name="email" required>
                 </p>
-                <p>
-                    <label>Correo</label>
-                    <input class="inputs" type="email" name="email">
+                <p class="block">
+                    <label>Enviar a:</label><br>
+                    <label>Cristian:</label>
+                    <input class="inputs" type="checkbox" name="correo_cristian">
+                    <label>Otro:</label>
+                    <input class="inputs" type="checkbox" name="otrocorreo">
+                    <input class="inputs" type="email" name="otroemail" placeholder="Si selecciono Otro ingrese correo acá">
                 </p>
-                <p>
+                <p class="block">
                     <label>Asunto</label>
-                    <input class="inputs" type="text" name="asunto">
+                    <input class="inputs" type="text" name="asunto" required>
+                </p>
+                <p class="block">
+                    <label>Subir archivo</label>
+                    <input type="file" name="file" required>
                 </p>
                 <p class="block">
                     <label>Mensaje</label>
-                    <textarea name="mensaje"></textarea>
+                    <textarea name="mensaje" required></textarea>
                 </p>
+
                 <p class=boton>
                     <input type="submit" name="enviar" value="Enviar">
                 </p>
             </form>
         </div>
     </div>
-
-    <footer>
-        <p class="autor">Pagina realizada por Cristian Pessio - Analista de sistemas en información</p>
-    </footer>
 
 </body>
 

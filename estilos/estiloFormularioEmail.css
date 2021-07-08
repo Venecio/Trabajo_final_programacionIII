@@ -4,7 +4,7 @@
 }
 body{
     text-align: center;
-    background: rgb(34, 32, 32)
+    background: rgb(22, 21, 21);
 }
 .contenido{
     display: inline-block;
@@ -14,12 +14,13 @@ body{
     margin-right: auto;
     padding: 1.5em;
     box-shadow: 0 0 15px 0 rgba(255, 255, 255, .3);
-    background: rgb(22, 21, 21)
+    background: rgb(22, 21, 21);
 }
 
 .formulario form{
 display: grid;
 grid-template-columns: 1fr 1fr;
+
 
 }
 .formulario form .block{
@@ -43,6 +44,8 @@ grid-template-columns: 1fr 1fr;
     outline: 0;
     color: #fff;
     border-bottom: 1px solid #d63031;
+    text-align: center;
+    
 }
 .boton{
     background-color:#d63031 ;

@@ -16,7 +16,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calcular promedio de notas</title>
+    <title>Plazo fijo</title>
 </head>
 
 <body>
@@ -40,7 +40,7 @@
                     </ul>
                 </li>
 
-                <li><a class="info" href="#"><i class="fa fa-fw fa-envelope "></i>Contacto</a></li>
+                <li><a class="info" href="../visual/contactoform.php"><i class="fa fa-fw fa-envelope "></i>Contacto</a></li>
                 <a class="iconos" target="_blank" href="https://github.com/Venecio">
                     <img src="../recursos/GitHub_Logo_White.png" width="50" height="25" />
                     <a class="iconos" target="_blank" href="https://www.unvime.edu.ar/">

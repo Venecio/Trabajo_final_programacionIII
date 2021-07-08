@@ -35,7 +35,7 @@
                     </ul>
                 </li>
 
-                <li><a class="info" href="../../visual/contactoform.html"><i class="fa fa-fw fa-envelope "></i>Contacto</a></li>
+                <li><a class="info" href="../../visual/contactoform.php"><i class="fa fa-fw fa-envelope "></i>Contacto</a></li>
                 <a class="iconos" target="_blank" href="https://github.com/Venecio">
                     <img src="../../recursos/GitHub_Logo_White.png" width="50" height="25" />
                     <a class="iconos" target="_blank" href="https://www.unvime.edu.ar/">
@@ -45,7 +45,7 @@
         </nav>
     </header>
     <br>
-    <h2 class="tituloprincipal">Estos son los datos que hay actualmente</h2>
+    <h2 class="tituloprincipal">Estos son los <span class="span">datos</span> que hay actualmente</h2>
     ­<table class="tabla" width="90%">
         <tr>
             <th id="bordes" colspan="10">Lista de productos</th>
@@ -65,17 +65,24 @@
             <th width="10%"></th>
             <th width="10%"></th>
             <th> <a class="link" id="bordes" href="actualizar.php">Actualizar (*)</a></th>
-            <th> <a class="link" id="bordes" href="export.php">Exportar (*)</a></th>
+            <th class="thsub">
+                <li><a class="link" id="bordes" href="">Exportar ▼</a>
+                    <ul class="submenu2">
+                        <li><a href="export.php?export=csv">Exportar .csv</a></li>
+                        <li><a href="export.php?export=xls">Exportar .xls</a></li>
+                        <li><a href="export.php?export=original">Archivo original</a></li>
+                    </ul>
+                </li>
+            </th>
             <th>
                 <a class="link" id="bordes" href="reset.php">Reset (*)</a>
             </th>
-
-            <?php
-            //defino array con los campos de la tabla
-            $ordenar = array('producto_id', 'producto_nombre', 'producto_cantidad', 'producto_fvencimiento', 'producto_precio', 'producto_estado');
-            $esAsc = isset($_GET['orden']) ? (bool) $_GET['orden'] : 1;
-            ?>
         </tr>
+        <?php
+        //defino array con los campos de la tabla
+        $ordenar = array('producto_id', 'producto_nombre', 'producto_cantidad', 'producto_fvencimiento', 'producto_precio', 'producto_estado');
+        $esAsc = isset($_GET['orden']) ? (bool) $_GET['orden'] : 1;
+        ?>
         <tr>
             <th id="bordes" class="columnas"><a class="columnas" href="vertabla.php?ordenar=producto_id&orden=<?php echo isset($_GET['orden']) ? !$_GET['orden'] : 1; ?>">ID ▲▼</th>
             <th id="bordes" class="columnas"><a class="columnas" href="vertabla.php?ordenar=producto_nombre&orden=<?php echo isset($_GET['orden']) ? !$_GET['orden'] : 1; ?>">Nombre</th>
@@ -90,21 +97,19 @@
         $order = 'producto_id';
         if (isset($_GET['ordenar']) && in_array($_GET['ordenar'], $ordenar)) {
             $order = $_GET['ordenar'];
-           
         }
-        if ($_GET['orden']== 1) {
-            $query = 'SELECT * FROM pessio_producto ORDER BY ' .  $order . ' ' .($esAsc?"ASC":"DESC");
-         } else {
-            $query = 'SELECT * FROM pessio_producto ORDER BY ' .  $order . ' ' .($esAsc?"ASC":"DESC");
+        if ($_GET['orden'] == 1) {
+            $query = 'SELECT * FROM pessio_producto ORDER BY ' .  $order . ' ' . ($esAsc ? "ASC" : "DESC");
+        } else {
+            $query = 'SELECT * FROM pessio_producto ORDER BY ' .  $order . ' ' . ($esAsc ? "ASC" : "DESC");
+        }
+        $result = mysqli_query($conexion, $query);
 
-         }
-         $result = mysqli_query($conexion, $query);
-        
 
         while ($row = mysqli_fetch_array($result)) {
         ?>
             <tr>
-                <td><?php echo $row['producto_id']?></td>
+                <td><?php echo $row['producto_id'] ?></td>
                 <td><?php echo $row['producto_nombre'] ?></td>
                 <td><?php echo $row['producto_cantidad'] ?></td>
                 <td><?php echo date("d-m-Y", strtotime($row['producto_fvencimiento'])) ?></td>

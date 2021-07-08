@@ -31,11 +31,11 @@
                     <ul class="submenu">
                         <li><a class="active">Calcular promedios de notas</a></li>
                         <li><a href="../ejercicios/calculos.php">Calculadora circulo</a></li>
-                        <li><a href="">Calcular plazo fijo</a></li>
+                        <li><a href="../ejercicios/plazofijo.php">Calcular plazo fijo</a></li>
                     </ul>
                 </li>
 
-                <li><a class="info" href="#"><i class="fa fa-fw fa-envelope "></i>Contacto</a></li>
+                <li><a class="info" href="../visual/contactoform.php"><i class="fa fa-fw fa-envelope "></i>Contacto</a></li>
                 <a class="iconos" target="_blank" href="https://github.com/Venecio">
                     <img src="../recursos/GitHub_Logo_White.png" width="50" height="25" />
                     <a class="iconos" target="_blank" href="https://www.unvime.edu.ar/">
@@ -44,7 +44,7 @@
             </ul>
         </nav>
     </header>
-    <h1 class="titulos">Ingrese Notas separadas por un espacio</h1>
+    <h1 class="titulos">Ingrese <span class="span">notas</span> separadas por un espacio</h1>
     <form method="POST">
         
         <input class="inputnotas" type="text" name="notas" placeholder="00 0 0,0 00"><br>

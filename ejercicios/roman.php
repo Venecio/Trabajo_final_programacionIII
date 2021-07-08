@@ -33,7 +33,7 @@
                     </ul>
                 </li>
 
-                <li><a class="info" href="#"><i class="fa fa-fw fa-envelope "></i>Contacto</a></li>
+                <li><a class="info" href="../visual/contactoform.php"><i class="fa fa-fw fa-envelope "></i>Contacto</a></li>
                 <a class="iconos" target="_blank" href="https://github.com/Venecio">
                     <img src="../recursos/GitHub_Logo_White.png" width="50" height="25" />
                     <a class="iconos" target="_blank" href="https://www.unvime.edu.ar/">
@@ -47,7 +47,7 @@
 
     </footer>
     </header>
-    <h1 class="titulos">Ingrese numero a convertir</h1>
+    <h1 class="titulos">Ingrese <span class="span">número</span> a convertir</h1>
     <form method="POST" action="">
         <input class="input" type="number" name="numero" max="3999"><br>
         <input class="boton" type="submit" value="Enviar">
